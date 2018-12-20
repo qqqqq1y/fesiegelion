@@ -1,0 +1,1 @@
+module.exports = resolve => { require(['@/pages/' + file + '.vue'], resolve); }
