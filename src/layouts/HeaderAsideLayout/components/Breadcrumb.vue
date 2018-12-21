@@ -12,14 +12,14 @@
 <script>
 
 export default {
-  name: "Breadcrumb",
+  name: 'Breadcrumb',
   created() {
-    this.getBreadcrumb()
+    this.getBreadcrumb();
   },
   data() {
     return {
       levelList: null
-    }
+    };
   },
   watch: {
     $route() {
@@ -28,23 +28,23 @@ export default {
   },
   methods: {
     getBreadcrumb() {
-      let matched = this.$route.matched.filter(item => item.name);
+      // let matched = this.$route.matched.filter(item => item.name);
       // const first = matched[0];
 
       // if (first && first.name !== 'dashboard') {
       //   matched = [{ path: '/dashboard', meta: { title: '今日工作台' }}].concat(matched);
       // }
-      let meta = this.$route.meta;
-      if(meta) {
+      const meta = this.$route.meta;
+      if (meta) {
         meta.breadcrum || (meta.breadcrum = []);
-        let breadcrum = JSON.parse(JSON.stringify(meta.breadcrum));
-        breadcrum && breadcrum.push({path: this.$route.path, title: meta.title});
+        const breadcrum = JSON.parse(JSON.stringify(meta.breadcrum));
+        breadcrum && breadcrum.push({ path: this.$route.path, title: meta.title });
 
         this.levelList = breadcrum;
       }
     }
   }
-}
+};
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>

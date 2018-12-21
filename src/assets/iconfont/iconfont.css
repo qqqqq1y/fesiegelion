@@ -1,0 +1,19 @@
+
+@font-face {font-family: "fesiegelion";
+  src: url('iconfont.eot?t=1545383532879'); /* IE9*/
+  src: url('iconfont.eot?t=1545383532879#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAQgAAsAAAAABoAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFY8o0gfY21hcAAAAYAAAABLAAABcOdVtjFnbHlmAAABzAAAAGgAAABoVYSoX2hlYWQAAAI0AAAALwAAADYTpOLDaGhlYQAAAmQAAAAcAAAAJAfeA4NobXR4AAACgAAAAAgAAAAICAAAAGxvY2EAAAKIAAAABgAAAAYANAAAbWF4cAAAApAAAAAeAAAAIAENACpuYW1lAAACsAAAAVAAAAKRppmG0XBvc3QAAAQAAAAAHwAAADDX3mJ6eJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2BkYWCcwMDKwMHUyXSGgYGhH0IzvmYwYuRgYGBiYGVmwAoC0lxTGBye6T7TZW7438AQw9zA0AAUZgTJAQDkLQw9eJxjYGBgZWBgYAZiHSBmYWBgDGFgZAABP6AoI1icmYELLM7CoARWwwISf6b7/z+MBPJZwCQDIxvDKOABkzJQHjisIJiBEQCW9AodAAABAAD/ygOsAyQAHQAAJRcHJzY3NjQnJiIHBhQXHgE3FwYmJyYQNzYgFxYSAyKJPMYRD15eY/9iXl5CqlRDcvBed3d9AUR8bw+QijzGDQ9j/2NeXmP/Y0EoGkMwK1t9AUN9d3d0/tMAeJxjYGRgYADiQ5fvmMXz23xl4GZhAIEbTudzEPT/UywMzCpALgcDE0gUAEtDCwAAeJxjYGRgYG7438AQw8IAAkCSkQEVMAEARwgCawQAAAAEAAAAAAAAAAA0AAB4nGNgZGBgYGKQYwDRIBYDAxcQMjD8B/MZAAuFATgAAHicddDLSsNAGAXgk97EBFwodj1uFBTSy0YouCq0rit036YzaUqSCZNpoRvfwIXP41P4AvoU7j1NRyilJszk+8/8MwwBcIkveNg/1xx7ewhY7V3DGYRznfmdc4PuOzfpJ+cW/ezs4wEvzgGu8MoTvMY5q3u8O3to48O5hgt8OteZfzs36B/nJtpe4Nyib5x9TL1H5wC33ps/NHJm5ULMtyKJdK50bn0ly0TGMk10PpHxOp2Zg+SAU2lKfkQv7B6kY5lL83dmuYn71iqhjM7EiIfLNNWiMHolIxsurS0GnY5yeRjpjFccwkBiBst5wd86x5ZzgggaOVQ1W/YprpfMJWKOlNqtTKp6zXrGc073nE6ntKnyXSXQQ4juP71jOq/6j+9ZYsPOPlPLvYLDcEdGjdzNd6ektEBRra2YRMxDLKtdBQbo8FVH/WH1B7JferN4S3icY2BigAAuBuyAiZGJkZmBrTg1sSg5g4EBABBcApIA') format('woff'),
+  url('iconfont.ttf?t=1545383532879') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1545383532879#fesiegelion') format('svg'); /* iOS 4.1- */
+}
+
+.fesiegelion {
+  font-family:"fesiegelion" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fesiegelion-search:before { content: "\e62d"; }
+

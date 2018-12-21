@@ -1,8 +1,7 @@
-import importData from './importData'
-
+import Home from './home';
 
 const routerConfig = [
-  ...importData,
+  ...Home
   // {
   //   path: '*',
   //   layout: HeaderAsideLayout,
@@ -11,7 +10,6 @@ const routerConfig = [
   //   meta: {
   //     title: '一个神秘的路径'
   //   }
-  // }
 ];
 
 export default routerConfig;

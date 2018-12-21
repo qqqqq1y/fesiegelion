@@ -1,33 +1,23 @@
 <template>
-  <div class="app-wrapper" >
-    <side-bar class="sidebar-container"></side-bar>
+  <div class="app-wrapper">
     <div class="main-container">
-      <nav-bar class="nav"></nav-bar>
+      <Header class="nav"></Header>
       <app-main></app-main>
     </div>
   </div>
 </template>
 
 <script>
-import { NavBar, SideBar, AppMain } from './components';
+import { Header, AppMain } from './components';
 
 export default {
   name: 'layout',
   components: {
-    NavBar,
-    SideBar,
+    Header,
     AppMain
   },
   created() {
-    const hospitalId = localStorage.getItem('hospitalId');
-    const userId = localStorage.getItem('userId');
 
-    if (hospitalId && userId) {
-      this.$store.commit('HOSPITALID', hospitalId);
-      this.$store.commit('USERID', userId);
-    } else {
-      this.$router.push({ name: 'login' });
-    }
   }
 };
 </script>
@@ -47,8 +37,6 @@ export default {
 .main-container {
   position: relative;
   min-height: 100vh;
-  transition: margin-left 0.28s;
-  margin-left: 256px;
   background-color: #f0f2f5;
 }
 

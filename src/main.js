@@ -1,13 +1,15 @@
+import 'normalize.css/normalize.css';
+import '@/styles/index.scss';
+import '@/assets/iconfont/iconfont.css';
+
 import Vue from 'vue';
 import ElementUI from 'element-ui';
 
 import store from '@/store';
-import '@/styles/element-theme/index.css';
-import 'normalize.css/normalize.css';
-import './styles/index.scss';
-import App from './App.vue';
+
+import App from './App';
 import router from './router/router';
-import copy from "fast-copy";
+// import copy from 'fast-copy';
 
 Vue.use(ElementUI);
 
@@ -18,4 +20,3 @@ new Vue({
   store,
   render: h => h(App),
 }).$mount('#app');
-

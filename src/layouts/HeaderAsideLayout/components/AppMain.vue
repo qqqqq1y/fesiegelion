@@ -1,6 +1,6 @@
 <template>
   <section class="app-main">
-    <breadcrumb class="breadcrumb"></breadcrumb>
+    <!-- <breadcrumb class="breadcrumb"></breadcrumb> -->
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Breadcrumb from './Breadcrumb.vue';
+import Breadcrumb from './Breadcrumb';
 
 export default {
   name: 'AppMain',

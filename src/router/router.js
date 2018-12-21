@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Vue from 'vue';
 import Router from 'vue-router';
 import routerConfig from './routerConfig';
@@ -30,12 +31,15 @@ NProgress.configure({
 
 const routerMap = [{
   path: '/',
-  redirect: '/import'
-}, {
+  redirect: '/home',
+  // component: () => import('@/views/login/login')
+},
+{
   path: '/login',
   name: 'login',
   component: () => import('@/views/login/login')
-}];
+}
+];
 
 const recursiveRouterConfig = (config = [], breadcrum = []) => {
   config.forEach((item) => {
@@ -59,11 +63,11 @@ const recursiveRouterConfig = (config = [], breadcrum = []) => {
     };
 
     if (Array.isArray(item.children)) {
-      let breadcrumbInfo = {
+      const breadcrumbInfo = {
         title: item.meta.title,
         path: item.path
       }
-      let _breadcrumb = [...breadcrum, breadcrumbInfo];
+      const _breadcrumb = [...breadcrum, breadcrumbInfo];
 
       recursiveRouterConfig(item.children, _breadcrumb);
     }
@@ -79,16 +83,16 @@ Vue.use(Router);
 
 const routers = new Router({
   routes
-})
+});
 
 routers.beforeEach((to, from, next) => {
-  NProgress.start() // start progress bar
+  NProgress.start(); // start progress bar
   next();
-})
+});
 
 routers.afterEach(() => {
   NProgress.done();
-})
+});
 
 export default routers;
 
