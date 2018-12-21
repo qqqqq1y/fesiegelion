@@ -8,7 +8,7 @@
         v-model="search"
         clearable>
       </el-input>
-      <i class="fesiegelion fesiegelion-search s_icon"></i>
+      <i class="fesiegelion fesiegelion-search s_icon" @click="handleSearch"></i>
     </div>
     <div class="logout">
       <i class="fesiegelion fesiegelion-search s_icon"></i>
@@ -25,7 +25,9 @@ export default {
     };
   },
   methods: {
-
+    handleSearch() {
+      console.log('search');
+    }
   },
 };
 </script>

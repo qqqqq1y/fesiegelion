@@ -10,6 +10,10 @@
   }
 }
 
+div:focus {
+  outline: none;
+}
+
 .main-container {
   background: #F2F7FA !important;
 }
