@@ -11,7 +11,7 @@
       <i class="fesiegelion fesiegelion-search s_icon"></i>
     </div>
     <div class="logout">
-
+      <i class="fesiegelion fesiegelion-search s_icon"></i>
     </div>
   </el-menu>
 </template>
@@ -37,14 +37,15 @@ export default {
   line-height: 56px;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
   .menu-title {
+    width: 30%;
     padding-left: 24px;
     font-size: 20px;
     font-weight: 600;
     color: #303030;
   }
   .header_search {
-    width: 288px;
-    margin-left: 96px;
+    width: 30%;
+    margin-left: 5%;
     position: relative;
     .s_icon {
       position: absolute;
@@ -52,6 +53,11 @@ export default {
       right: 0;
       color: #D8DCE6;
     }
+  }
+  .logout {
+    flex: 1;
+    padding-right: 24px;
+    text-align: right;
   }
 }
 </style>
