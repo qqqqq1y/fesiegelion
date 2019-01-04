@@ -4,7 +4,7 @@ import { Message } from 'element-ui';
 import store from '@/store';
 
 let instance = axios.create({
-  baseURL: "/web/",
+  baseURL: "/api/",
   withCredentials: true,
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded'
@@ -22,7 +22,7 @@ instance.interceptors.request.use(function (config) {
 });
 
 instance.interceptors.response.use(function (response) {
-  if (response.data.code !== 1) {
+  if (response.data.ret !== 1) {
     Message({
       showClose: true,
       message: response.data.tip,

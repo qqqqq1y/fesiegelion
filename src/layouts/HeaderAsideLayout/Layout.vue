@@ -1,20 +1,22 @@
 <template>
   <div class="app-wrapper">
     <div class="main-container">
-      <Header class="nav"></Header>
+      <Header class="header"></Header>
+      <Nav></Nav>
       <app-main></app-main>
     </div>
   </div>
 </template>
 
 <script>
-import { Header, AppMain } from './components';
+import { Header, AppMain, Nav } from './components';
 
 export default {
   name: 'layout',
   components: {
     Header,
-    AppMain
+    AppMain,
+    Nav
   },
   created() {
 
@@ -40,7 +42,7 @@ export default {
   background-color: #f0f2f5;
 }
 
-.nav {
+.header {
   height: 56px!important;
 }
 </style>

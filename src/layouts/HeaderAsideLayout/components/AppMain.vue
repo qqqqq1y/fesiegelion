@@ -19,6 +19,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .app-main {
+    background: #fff;
+  }
   .breadcrumb {
     margin-top: 8px;
     line-height: 24px!important;

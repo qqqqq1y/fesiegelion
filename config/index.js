@@ -11,11 +11,11 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/web': {
-        target: 'https://nbdev.hushijie.com.cn',
+      '/api': {
+        target: 'http://localhost:3000/',
         changeOrigin: true,
         pathRewrite: {
-          '^/web': '/web',
+          '^/api': '/api',
         }
       },
     },
