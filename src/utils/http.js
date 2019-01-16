@@ -1,18 +1,17 @@
-import axios from "axios";
-import Qs from "qs";
+import axios from 'axios';
+import Qs from 'qs';
 import { Message } from 'element-ui';
-import store from '@/store';
 
-let instance = axios.create({
-  baseURL: "/api/",
+const instance = axios.create({
+  baseURL: '/api/',
   withCredentials: true,
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded'
   }
-})
+});
 
 instance.interceptors.request.use(function (config) {
-  const url = config.url;
+  // const url = config.url;
 
   // 在发送请求之前做些什么
   return config;

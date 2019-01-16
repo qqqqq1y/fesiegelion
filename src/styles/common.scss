@@ -208,3 +208,26 @@ div:focus {
     border-bottom: 1px solid #D8DCE6 !important;
   }
 }
+
+.nav-container {
+  .el-dialog__header {
+    padding: 0 24px !important;
+    font-size: 16px;
+  }
+  .el-form-item__label {
+    padding-right: 24px;
+  }
+  .el-form-item__content {
+    .el-input {
+      width: 50%;
+      .el-input__inner {
+        border: none;
+        border-bottom: 1px solid #D8DCE6;
+      }
+    }
+    .el-select {
+      width: 80%;
+    }
+  }
+}
+
