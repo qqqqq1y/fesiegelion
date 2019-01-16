@@ -20,22 +20,22 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-// app.all("*", function (req, res, next) {
-//   if (req.url != "/favicon.ico") {
-//     next();
-//   };
-
-//   next();
-
-// })
-
 app.use('/', indexRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/article', articleRouter);
 
+
+app.all("*", function (req, res, next) {
+  res.header('X-Rowered-By', '3.2.1');
+  res.header('Cache-Control', 'no-store');
+
+  next();
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  console.log('get a req');
+
   next(createError(404));
 });
 

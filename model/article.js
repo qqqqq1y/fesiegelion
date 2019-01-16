@@ -1,19 +1,24 @@
-var connection = require('./index');
+// var connection = require('./index');
 var mysql = require('mysql');
-var errCallback = {
-  ret: 0,
-  tip: '操作失败',
-  data: {}
+var db = {};
+var connectObj = {
+  host: 'localhost',
+  user: 'root',
+  password: 'ycxjqyt1.',
+  database: 'qyt'
 };
 
-function findArticleList(params, cb) {
-  console.log(params);
+db.findArticleList = function(params, cb) {
+  var connection = mysql.createConnection(connectObj);
+
+  connection.connect();
 
   let addSql = "select * from article";
 
   connection.query(addSql, function (err, res) {
     if (err) {
       console.log(err);
+
       return;
     } else {
       cb(res);
@@ -23,28 +28,28 @@ function findArticleList(params, cb) {
   connection.end();
 }
 
-function addArticle(cb) {
-  let addSql = "";
+module.exports = db;
 
-  connection.query(addSql, function(err, res) {
-    if (err) {
-      cb(errCallback);
+// function addArticle(cb) {
+//   let addSql = "";
 
-      return;
-    } else {
-      cb({
-        ret: 1,
-        tip: '添加成功',
-        data: {}
-      });
-    }
-
-    connection.end();
-  });
-}
+//   connection.query(addSql, function(err, res) {
+//     if (err) {
 
 
-module.exports = {
-  findArticleList,
-  addArticle
-};
+//       return;
+//     } else {
+//       cb({
+//         ret: 1,
+//         tip: '添加成功',
+//         data: {}
+//       });
+//     }
+//   });
+// }
+
+
+// module.exports = {
+//   findArticleList,
+//   addArticle
+// };

@@ -12,6 +12,8 @@ router.get('/list', function(req, res) {
       tip: '操作成功',
       data: data
     });
+
+    res.end();
   }
 
   articleModel.findArticleList(params, cb);
