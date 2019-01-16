@@ -10,8 +10,9 @@ var http = require('http');
 /**
  * Create HTTP server.
  */
+var port = 80;
 
-var server = http.createServer(app).listen(3000);
+var server = http.createServer(app).listen(port);
 
 /**
  * Listen on provided port, on all network interfaces.
