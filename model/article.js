@@ -4,7 +4,7 @@ var db = {};
 var connectObj = {
   host: '127.0.0.1',
   user: 'root',
-  password: 'ycxjqyt1.',
+  password: 'Ycxjqyt1.',
   database: 'qyt'
 };
 
@@ -17,8 +17,6 @@ db.findArticleList = function(params, cb) {
 
   connection.query(addSql, function (err, res) {
     if (err) {
-      console.log(err, '>?????>>>>?>?>>?>?>?>>>?>>?>?>>?>>');
-
       return;
     } else {
       cb(res);
